@@ -3,7 +3,10 @@ layout: post
 title: Facebook iOS Login with native app
 date: 2016-07-04 22:49:24.000000000 +08:00
 ---
-Facebook 因為使用體驗的因素，將呼叫 Facebook native app來login的方式拔掉了。[來源...][ref-fb-remove-native-login]
+Facebook 因為使用體驗的因素，將呼叫 Facebook native app來login的方式拔掉了。
+[來源...][ref-fb-remove-native-login]
+
+以下說明如何呼叫Native FB來進行登入：
 
 1. 使用pod 安裝facebook `FBSDKCoreKit`, `FBSDKLoginKit`
 2. 打開`FBSDKCoreKit/FBSDKServerConfiguration.m`
