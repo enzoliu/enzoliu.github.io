@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 善用inputView
+title: Facebook iOS Login with native app
 date: 2016-07-04 22:49:24.000000000 +08:00
 ---
 Facebook 因為使用體驗的因素，將呼叫 Facebook native app來login的方式拔掉了。[來源...][ref-fb-remove-native-login]
