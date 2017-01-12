@@ -13,6 +13,7 @@ NSLocale.currentLocale().localeIdentifier
 ```
 
 三者取得的值不一定相同，這跟他們的呼叫邏輯有點關係。
+
 在說明這件事之前，先用下列例子了解一下語系設定的細節：
 
 > 範例一
@@ -26,6 +27,7 @@ NSLocale.currentLocale().localeIdentifier
 | zh-Hans_US | zh-Hans    |
 
 在手機設定的部分，第一順位語言為香港繁體，第二順位為英文，第三順位為簡體。
+
 此外，手機設定地區是美國。
 
 而APP部分提供英文｀繁體及簡體中文版語言。
@@ -59,15 +61,19 @@ ja_US
 zh-Hans
 
 > 說明
+
 `NSLocale.preferredLanguages().first`
 會將手機語系第一順位直接列出，包含地區設定。
+
 `NSLocale.currentLocale().localeIdentifier`
 會將手機語系第一順位以[rfc4646][ref-rfc4646]標準輸出。
+
 `NSBundle.mainBundle().preferredLocalizations.first`
 這比較有趣，他會從APP bundle語系裡，尋找手機語系列表中匹配的語言來輸出。
 簡單來說，若想要取得「APP有提供，且用戶有將該語系作為語言之一」的語系，用這個就對了。
 
 > 補充說明
+
 很多人可能會覺得納悶，為何會有像`zh-Hans-US`這種奇怪的組合出現，
 iOS9開始，Apple對NSLocale做了些[更動][ios9-nslocale]
 Apple將`-`符號切開的三個部分分別命名如下：
@@ -77,7 +83,9 @@ kCFLocaleLanguageCodeKey
 kCFLocaleScriptCodeKey
 kCFLocaleCountryCodeKey
 ```
+
 以`zh-Hans-US`為例 :
+
 ```swift
 kCFLocaleLanguageCodeKey => zh
 kCFLocaleScriptCodeKey => Hans
